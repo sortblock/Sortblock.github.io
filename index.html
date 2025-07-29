@@ -136,7 +136,7 @@
   <div class="hero-body">
     <div class="container is-max-desktop">
     <br>
-      <img src="./static/images/speedup.png" alt="MY ALT TEXT">
+      <img src="./static/images/speed.png" alt="MY ALT TEXT">
       
       <span style="font-size: 0.8em; width: 100%; display: inline-block;">Figure 1:  Sortblock accelerates DiT models Flux, Wan2.1 and HunyuanVideo by 200%, 226% and 240% respectively, while maintaining fidelity and high consistency with the original image.</span>
     </div>
@@ -162,7 +162,27 @@
 </section>
 <!-- End paper abstract -->
 
-
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Timestep Embedding Aware Cache (TeaCache)</h2>
+        
+        <h2 class="title is-4">Motivation</h2>
+        <div class="content has-text-justified">
+          <p>
+            To leverage this sparsity, Sortblock selectively updates only a small subset of DiT blocks that exhibit the most significant changes between adjacent steps. The challenge lies in efficiently and accurately identifying these DiT blocks. As shown in Fig. 2, we compute the cosine similarity between the input-output changes of DiT blocks at step K and step K+1. By utilizing the cosine similarity between the input-output changes of each DiT block, we identify those DiT blocks with the most substantial changes. Only these selected DiT blocks undergo complete feature recomputation and cache updates.
+          </p>
+          <div class="content has-text-centered">
+            <img src="./static/images/liuchen.png" style="width: 100%;"><br>
+            <span style="font-size: 0.8em; width: 100%; display: inline-block;">Figure 2: The Sortblock pipeline. Block features are adaptively updated based on their similarity between fully computed and
+              predicted counterparts. Specifically, blocks with low similarity are recomputed, while the others are efficiently approximated via
+              prediction.</span>
+          </div>
+      </div>
+    </div>
+  </div>
+</section>
 <!-- Image carousel -->
 <section class="hero is-small">
   <div class="hero-body">
