@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
   <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
   <!-- Replace the content tag with appropriate information -->
   <meta name="description" content="DESCRIPTION META TAG">
-  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
-  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
-  <meta property="og:url" content="URL OF THE WEBSITE"/>
+  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG" />
+  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG" />
+  <meta property="og:url" content="URL OF THE WEBSITE" />
   <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
   <meta property="og:image" content="static/image/your_banner_image.png" />
-  <meta property="og:image:width" content="1200"/>
-  <meta property="og:image:height" content="630"/>
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
 
 
   <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
@@ -26,15 +27,13 @@
 
   <title>Sortblock: Similarity-Aware Feature Reuse for Diffusion Model</title>
   <!-- <link rel="icon" type="image/x-icon" href="static/images/favicon.ico"> -->
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
-  rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
 
   <link rel="stylesheet" href="static/css/bulma.min.css">
   <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
   <link rel="stylesheet" href="static/css/bulma-slider.min.css">
   <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
-  <link rel="stylesheet"
-  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="static/css/index.css">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -44,6 +43,7 @@
   <script src="static/js/bulma-slider.min.js"></script>
   <script src="static/js/index.js"></script>
 </head>
+
 <body>
 
 
@@ -55,221 +55,243 @@
             <h1 class="title is-1 publication-title">Sortblock: Similarity-Aware Feature Reuse for Diffusion Model</h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
-              <div class="is-size-5 publication-authors">
-                <span class="author-block">
-                  <a>Hanqi Chen</a><sup>1,2</sup><sup>*</sup>,&nbsp;
-                </span>
-                <span class="author-block">
-                  <a>Xu Zhang</a><sup>1</sup><sup>‡</sup>,&nbsp;
-                </span>
-                <span class="author-block">
-                  <a>Xiaoliu Guan</a><sup>1,3</sup>,&nbsp;
-                </span>
-                <span class="author-block">
-                  <a>Lielin Jiang</a><sup>1</sup>,&nbsp;
-                </span>
-                <span class="author-block">
-                  <a>Guanzhong Wang</a><sup>1</sup>,&nbsp;
-                </span>
-                <br>
-                <span class="author-block">
-                  <a>Zeyu Chen</a><sup>1</sup>,&nbsp;
-                </span>
-                <span class="author-block">
-                  <a>Yi Liu</a><sup>1</sup>,&nbsp;
-                </span>
-              <div class="is-size-5 publication-authors">
-                <span class="author-block"><sup>1</sup>PaddlePaddle Team,Baidu Inc&nbsp;</span>
-                <br>
-                <span class="author-block"><sup>2</sup>International Joint Innovation Center, The Electromagnetics Academy at Zhejiang University</span>
-                <br>
-                <span class="author-block"><sup>3</sup>School of Computer Science, Wuhan university</span>
-              </div>
-              <div class="is-size-5 publication-authors">
-                (* Work was done during internship at PaddlePaddle Team. ‡ Corresponding author.)
-              </div>
-              </div>
-                  </span>
-                  </div>
+              <span class="author-block">
+                <a>Hanqi Chen</a><sup>1*</sup>,&nbsp;
+              </span>
+              <span class="author-block">
+                <a>Xu Zhang</a><sup>2*</sup>,&nbsp;
+              </span>
+              <span class="author-block">
+                <a>Xiaoliu Guan</a><sup>3</sup>,&nbsp;
+              </span>
+              <span class="author-block">
+                <a>Lielin Jiang</a><sup>2</sup>,&nbsp;
+              </span>
+              <span class="author-block">
+                <a>Guanzhong Wang</a><sup>2†</sup>,&nbsp;
+              </span>
+              <span class="author-block">
+                <a>Zeyu Chen</a><sup>2</sup>,&nbsp;
+              </span>
+              <span class="author-block">
+                <a>Yi Liu</a><sup>2</sup>
+              </span>
+            </div>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><sup>1</sup>Zhejiang University,&nbsp;</span>
+              <span class="author-block"><sup>2</sup>Baidu Inc.,&nbsp;</span>
+              <span class="author-block"><sup>3</sup>Wuhan University</span>
+            </div>
+            <div class="is-size-5 publication-authors">
+              (* Equal contribution. † Corresponding author.)
+            </div>
 
-                  <div class="column has-text-centered">
-                    <div class="publication-links">
-                         <!-- Arxiv PDF link -->
-                      <span class="link-block">
-                        <a href="https://arxiv.org/abs/2508.00412" target="_blank"
-                        class="external-link button is-normal is-rounded is-dark">
-                        <span class="icon">
-                          <i class="fas fa-file-pdf"></i>
-                        </span>
-                        <span>Paper</span>
-                      </a>
-                    </span>
-
-                    <!-- Supplementary PDF link -->
-                    <span class="link-block">
-                      <a href="#bibtex" class="external-link button is-normal is-rounded is-dark">
-                        <span class="icon">
-                            <i class="ai ai-obp"></i>
-                        </span>
-                        <span>BibTex</span>
-                      </a>
-                  </span>
-                  
-                  <!-- Github link -->
-                  <span class="link-block">
-                    <a href="https://github.com/PaddlePaddle/PaddleMIX/tree/develop/ppdiffusers/examples/Fast-Diffusers/Training-Free/sortblock" target="_blank"
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- Arxiv PDF link -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/2508.00412" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Paper</span>
+                  </a>
+                </span>
+
+                <!-- Supplementary PDF link -->
+                <span class="link-block">
+                  <a href="#bibtex" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="ai ai-obp"></i>
+                    </span>
+                    <span>BibTex</span>
+                  </a>
+                </span>
+
+                <!-- Github link -->
+                <span class="link-block">
+                  <a href="https://github.com/PaddlePaddle/PaddleMIX/tree/develop/ppdiffusers/examples/Fast-Diffusers/Training-Free/sortblock"
+                    target="_blank" class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-github"></i>
                     </span>
                     <span>Code</span>
                   </a>
                 </span>
-                </a>
-              </span>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
 
-<!-- Teaser video-->
-<section class="hero teaser">
-  <div class="hero-body">
-    <div class="container is-max-desktop">
-    <br>
-      <img src="./static/images/speed.png" alt="MY ALT TEXT">
-      <span style="font-size: 1em; width: 100%; display: inline-block;">Figure 1:  Sortblock accelerates DiT models Flux, Wan2.1 and HunyuanVideo by 200%, 226% and 240% respectively, while maintaining fidelity and high consistency with the original image.</span>
-    </div>
-    <!-- </div> -->
-  </div>
-</section>
-<!-- End teaser video -->
-
-<!-- Paper abstract -->
-<section class="section hero is-light">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <p>
-            Diffusion Transformers (DiTs) have demonstrated remarkable generative capabilities, particularly benefiting from Transformer architectures that enhance visual and artistic fidelity. However, their inherently sequential denoising process results in high inference latency, limiting their deployment in real-time scenarios. Existing training-free acceleration approaches typically reuse intermediate features at fixed timesteps or layers, overlooking the evolving semantic focus across denoising stages and Transformer blocks.To address this, we propose Sortblock, a training-free inference acceleration framework that dynamically caches block-wise features based on their similarity across adjacent timesteps. By ranking the evolution of residuals, Sortblock adaptively determines a recomputation ratio, selectively skipping redundant computations while preserving generation quality. Furthermore, we incorporate a lightweight linear prediction mechanism to reduce accumulated errors in skipped blocks.Extensive experiments across various tasks and DiT architectures demonstrate that Sortblock achieves over 200% inference speedup with minimal degradation in output quality, offering an effective and generalizable solution for accelerating diffusion-based generative models.
-          </p>
-        </div>
+  <!-- Teaser video-->
+  <section class="hero teaser">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <br>
+        <img src="./static/images/speed.png" alt="MY ALT TEXT">
+        <span style="font-size: 1em; width: 100%; display: inline-block;">Figure 1: Sortblock accelerates DiT models
+          Flux, Wan2.1 and HunyuanVideo by 200%, 226% and 240% respectively, while maintaining fidelity and high
+          consistency with the original image.</span>
       </div>
+      <!-- </div> -->
     </div>
-  </div>
-</section>
-<!-- End paper abstract -->
+  </section>
+  <!-- End teaser video -->
 
-<section class="section">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Similarity-Aware Feature Reuse (Sortblock)</h2>
-        
-        <h2 class="title is-4">Motivation</h2>
-        <div class="content has-text-justified">
-          <p>
-            To leverage this sparsity, Sortblock selectively updates only a small subset of DiT blocks that exhibit the most significant changes between adjacent steps. The challenge lies in efficiently and accurately identifying these DiT blocks. As shown in Fig. 2, we compute the cosine similarity between the input-output changes of DiT blocks at step K and step K+1. By utilizing the cosine similarity between the input-output changes of each DiT block, we identify those DiT blocks with the most substantial changes. Only these selected DiT blocks undergo complete feature recomputation and cache updates.
-          </p>
-          <div class="content has-text-centered">
-            <img src="./static/images/liuchen.png" style="width: 100%;"><br>
-            <span style="font-size: 1em; width: 100%; display: inline-block;">Figure 2: The Sortblock pipeline. Block features are adaptively updated based on their similarity between fully computed and
-              predicted counterparts. Specifically, blocks with low similarity are recomputed, while the others are efficiently approximated via
-              prediction.</span>
+  <!-- Paper abstract -->
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              Diffusion Transformers (DiTs) have demonstrated remarkable generative capabilities, particularly
+              benefiting from Transformer architectures that enhance visual and artistic fidelity. However, their
+              inherently sequential denoising process results in high inference latency, limiting their deployment in
+              real-time scenarios. Existing training-free acceleration approaches typically reuse intermediate features
+              at fixed timesteps or layers, overlooking the evolving semantic focus across denoising stages and
+              Transformer blocks.To address this, we propose Sortblock, a training-free inference acceleration framework
+              that dynamically caches block-wise features based on their similarity across adjacent timesteps. By
+              ranking the evolution of residuals, Sortblock adaptively determines a recomputation ratio, selectively
+              skipping redundant computations while preserving generation quality. Furthermore, we incorporate a
+              lightweight linear prediction mechanism to reduce accumulated errors in skipped blocks.Extensive
+              experiments across various tasks and DiT architectures demonstrate that Sortblock achieves over 200%
+              inference speedup with minimal degradation in output quality, offering an effective and generalizable
+              solution for accelerating diffusion-based generative models.
+            </p>
           </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- Image carousel -->
-
-<section class="section">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Evaluations</h2>
-        
-        <h2 class="title is-4">Quantitative Results</h2>
-        <div class="content has-text-centered">
-          <img src="./static/images/table_flux.png">
-          <img src="./static/images/table_hunyuan.png">
-          <img src="./static/images/table_Wan.png">
         </div>
       </div>
-    </div>  
-    <h2 class="title is-4">Visual Results</h2>
+    </div>
+  </section>
+  <!-- End paper abstract -->
+
+  <section class="section">
     <div class="container is-max-desktop">
-      <img src="./static/images/fig7.png" style="width: 100%;"><br>
-        <span style="font-size: 1em; width: 100%; display: inline-block;">Figure 3: Qualitative Results. Sortblock delivers high fidelity and maintains consistency with original images.</span>
-      <br>
-      <br>  
-      <img src="./static/images/fig8.png" style="width: 100%;"><br>
-        <span style="font-size: 1em; width: 100%; display: inline-block;">Figure 4: Ablation study on the effect of K.</span>
-      <br>
-      <br>  
-      <img src="./static/images/fig9.png" style="width: 100%;"><br>
-            <span style="font-size: 1em; width: 100%; display: inline-block;">Figure 5: Effect of using Sortblock at different denoising stages.</span>
-      <br>
-      <br>  
-      <img src="./static/images/fig10.png" style="width: 100%;"><br>
-            <span style="font-size: 1em; width: 100%; display: inline-block;">Figure 6: Impact of different β.</span>
-      <br>
-      <br>  
-      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; place-items: center; font-size: 1.2em;">
-        <div>Wan2.1, 86s</div>
-        <div>TeaCache, 44s</div>
-        <div>Sortblock, <font color="#FF0000">38s</font></div>
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-3">Similarity-Aware Feature Reuse (Sortblock)</h2>
+
+          <h2 class="title is-4">Methodology</h2>
+          <div class="content has-text-justified">
+            <p>
+              To leverage this sparsity, Sortblock selectively updates only a small subset of DiT blocks that exhibit
+              the most significant changes between adjacent steps. The challenge lies in efficiently and accurately
+              identifying these DiT blocks. As shown in Fig. 2, we compute the cosine similarity between the
+              input-output changes of DiT blocks at step K and step K+1. By utilizing the cosine similarity between the
+              input-output changes of each DiT block, we identify those DiT blocks with the most substantial changes.
+              Only these selected DiT blocks undergo complete feature recomputation and cache updates.
+            </p>
+            <div class="content has-text-centered">
+              <img src="./static/images/liuchen.png" style="width: 100%;"><br>
+              <span style="font-size: 1em; width: 100%; display: inline-block;">Figure 2: The Sortblock pipeline. Block
+                features are adaptively updated based on their similarity between fully computed and
+                predicted counterparts. Specifically, blocks with low similarity are recomputed, while the others are
+                efficiently approximated via
+                prediction.</span>
+            </div>
+          </div>
+        </div>
       </div>
-      <video class="video" autoplay="" controls="" muted="" loop="" playsinline="">
-        <source src="./static/videos/wan_3x3.mp4" type="video/mp4">
-      </video>
-      <span style="font-size: 1.5em; width: 100%; display: inline-block; text-align: center;">Wan2.1, 81-frame, 832x480.</span>
-      <br>
-      <br>
-      
+  </section>
+  <!-- Image carousel -->
 
-      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; place-items: center; font-size: 1.2em;">
-        <div>HunyuanVideo, 53s</div>
-        <div>TeaCache, 22s</div>
-        <div>Sortblock, <font color="#FF0000">22s</font></div>
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-3">Evaluations</h2>
+
+          <h2 class="title is-4">Quantitative Results</h2>
+          <div class="content has-text-centered">
+            <img src="./static/images/table_flux.png" style="width: 100%;">
+            <img src="./static/images/table_hunyuan.png" style="width: 50%;">
+            <img src="./static/images/table_Wan.png" style="width: 50%;">
+          </div>
+        </div>
       </div>
-      <video class="video" autoplay="" controls="" muted="" loop="" playsinline="">
-        <source src="./static/videos/hunyuan_3x3.mp4" type="video/mp4">
-      </video>
-      <span style="font-size: 1.5em; width: 100%; display: inline-block; text-align: center;">HunyuanVideo, 61-frame, 512x320.</span>
-      <br>
-      <br>
-    </div>    
-  </div> 
-</section>
-<!-- End image carousel -->
+      <h2 class="title is-4">Visual Results</h2>
+      <div class="container is-max-desktop">
+        <img src="./static/images/fig7.png" style="width: 100%;"><br>
+        <span style="font-size: 1em; width: 100%; display: inline-block;">Figure 3: Qualitative Results. Sortblock
+          delivers high fidelity and maintains consistency with original images.</span>
+        <br>
+        <br>
+        <img src="./static/images/fig8.png" style="width: 100%;"><br>
+        <span style="font-size: 1em; width: 100%; display: inline-block;">Figure 4: Ablation study on the effect of
+          K.</span>
+        <br>
+        <br>
+        <img src="./static/images/fig9.png" style="width: 100%;"><br>
+        <span style="font-size: 1em; width: 100%; display: inline-block;">Figure 5: Effect of using Sortblock at
+          different denoising stages.</span>
+        <br>
+        <br>
+        <img src="./static/images/fig10.png" style="width: 100%;"><br>
+        <span style="font-size: 1em; width: 100%; display: inline-block;">Figure 6: Impact of different β.</span>
+        <br>
+        <br>
+        <div
+          style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; place-items: center; font-size: 1.2em;">
+          <div>Wan2.1, 86s</div>
+          <div>TeaCache, 44s</div>
+          <div>Sortblock, <font color="#FF0000">38s</font>
+          </div>
+        </div>
+        <video class="video" autoplay="" controls="" muted="" loop="" playsinline="">
+          <source src="./static/videos/wan_3x3.mp4" type="video/mp4">
+        </video>
+        <span style="font-size: 1.5em; width: 100%; display: inline-block; text-align: center;">Wan2.1, 81-frame,
+          832x480.</span>
+        <br>
+        <br>
 
 
-<!-- Video carousel -->
+        <div
+          style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; place-items: center; font-size: 1.2em;">
+          <div>HunyuanVideo, 53s</div>
+          <div>TeaCache, 22s</div>
+          <div>Sortblock, <font color="#FF0000">22s</font>
+          </div>
+        </div>
+        <video class="video" autoplay="" controls="" muted="" loop="" playsinline="">
+          <source src="./static/videos/hunyuan_3x3.mp4" type="video/mp4">
+        </video>
+        <span style="font-size: 1.5em; width: 100%; display: inline-block; text-align: center;">HunyuanVideo, 61-frame,
+          512x320.</span>
+        <br>
+        <br>
+      </div>
+    </div>
+  </section>
+  <!-- End image carousel -->
 
-<!-- End video carousel -->
+
+  <!-- Video carousel -->
+
+  <!-- End video carousel -->
 
 
 
 
 
 
-<!-- Paper poster -->
+  <!-- Paper poster -->
 
-<!--End paper poster -->
+  <!--End paper poster -->
 
 
-<!--BibTex citation -->
-<section class="section" id="BibTeX">
-  <div class="container is-max-desktop content">
-    <h2 class="title"><a id="bibtex">BibTeX</a></h2>
-    <pre><code>
+  <!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title"><a id="bibtex">BibTeX</a></h2>
+      <pre><code>
       @misc{chen2025sortblocksimilarityawarefeaturereuse,
         title={Sortblock: Similarity-Aware Feature Reuse for Diffusion Model}, 
         author={Hanqi Chen and Xu Zhang and Xiaoliu Guan and Lielin Jiang and Guanzhong Wang and Zeyu Chen and Yi Liu},
@@ -280,33 +302,35 @@
         url={https://arxiv.org/abs/2508.00412}, 
   }
     </code></pre>
-  </div>
-</section>
-<!--End BibTex citation -->
+    </div>
+  </section>
+  <!--End BibTex citation -->
 
 
   <footer class="footer">
-  <div class="container">
-    <div class="columns is-centered">
-      <div class="column is-8">
-        <div class="content">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
 
-          <p>
-            <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
-          </p>
+            <p>
+              <br> This website is licensed under a <a rel="license"
+                href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+                Commons Attribution-ShareAlike 4.0 International License</a>.
+            </p>
 
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</footer>
+  </footer>
 
-<!-- Statcounter tracking code -->
-  
-<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+  <!-- Statcounter tracking code -->
 
-    <!-- End of Statcounter Code -->
+  <!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
 
-  </body>
-  </html>
+  <!-- End of Statcounter Code -->
+
+</body>
+
+</html>
